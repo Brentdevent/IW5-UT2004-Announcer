@@ -18,25 +18,25 @@ main()
 multiKillUT(var_0, var_1)
 {
 	if ( var_1 == 2 )
-    {
+	{
 		self playsound("double_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_DOUBLEKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "double" );
-    }
-    else if ( var_1 == 3 )
-    {
+	}
+	else if ( var_1 == 3 )
+	{
 		self playsound("multi_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MULTIKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "triple" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_3xpluskill", self );
-    }
+	}
     else if ( var_1 == 4 )
     {
 		self playsound("mega_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MEGAKILL"  );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_4xkill", self );
-    }
+	}
 	else if ( var_1 == 5 )
 	{
 		self playsound("ultra_kill");
