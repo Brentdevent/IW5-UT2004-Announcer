@@ -1,0 +1,54 @@
+//multi sounds
+sound,monster_kill
+sound,double_kill
+sound,holy_shit
+sound,ludicrous_kill
+sound,mega_kill
+sound,monster_kill
+sound,multi_kill
+sound,ultra_kill
+
+//misc sounds
+sound,headshot
+sound,first_blood
+
+//killstreak sounds
+sound,dominating
+sound,god_like
+sound,killing_spree
+sound,rampage
+sound,unstoppable
+sound,wicked_sick
+
+//timer sounds
+sound,5min_remaining
+sound,3min_remaining
+sound,2min_remaining
+sound,1min_remaining
+sound,30sec_remaining
+sound,20sec_remaining
+sound,ten
+sound,nine
+sound,eight
+sound,seven
+sound,six
+sound,five
+sound,four
+sound,three
+sound,two
+sound,one
+
+//localized strings
+localize,SPLASHES_HOLYSHIT
+localize,SPLASHES_HOLYSHIT_DESC
+localize,SPLASHES_LUDICROUSKILL
+localize,SPLASHES_LUDICROUSKILL_DESC
+localize,SPLASHES_MEGAKILL
+localize,SPLASHES_MEGAKILL_DESC
+localize,SPLASHES_MONSTERKILL
+localize,SPLASHES_MONSTERKILL_DESC
+localize,SPLASHES_ULTRAKILL
+localize,SPLASHES_ULTRAKILL_DESC
+
+//stringtables
+stringtable,mp/splashtable.csv
