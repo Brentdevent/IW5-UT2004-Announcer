@@ -30,8 +30,8 @@ multiKillUT(var_0, var_1)
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "triple" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_3xpluskill", self );
 	}
-    else if ( var_1 == 4 )
-    {
+	else if ( var_1 == 4 )
+	{
 		self playsound("mega_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MEGAKILL"  );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
