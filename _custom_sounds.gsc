@@ -18,49 +18,49 @@ main()
 multiKillUT(var_0, var_1)
 {
 	if ( var_1 == 2 )
-	{
-		self playsound("double_kill");
+    {
+		self playLocalSound("double_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_DOUBLEKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "double" );
-	}
-	else if ( var_1 == 3 )
-	{
-		self playsound("multi_kill");
+    }
+    else if ( var_1 == 3 )
+    {
+		self playLocalSound("multi_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MULTIKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "triple" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_3xpluskill", self );
-	}
-	else if ( var_1 == 4 )
-	{
-		self playsound("mega_kill");
+    }
+    else if ( var_1 == 4 )
+    {
+		self playLocalSound("mega_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MEGAKILL"  );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_4xkill", self );
-	}
+    }
 	else if ( var_1 == 5 )
 	{
-		self playsound("ultra_kill");
+		self playLocalSound("ultra_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_ULTRAKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_5xkill", self );
 	}
 	else if ( var_1 == 6 )
 	{
-		self playsound("monster_kill");
+		self playLocalSound("monster_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_MONSTERKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_6xkill", self );
 	}
 	else if ( var_1 == 7 )
 	{
-		self playsound("ludicrous_kill");
+		self playLocalSound("ludicrous_kill");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_LUDICROUSKILL" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_7xkill", self );
 	}
 	else
 	{
-		self playsound("holy_shit");
+		self playLocalSound("holy_shit");
 		self thread maps\mp\gametypes\_rank::xpEventPopup( &"SPLASHES_HOLYSHIT" );
 		self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "multi" );
 		thread maps\mp\_utility::teamPlayerCardSplash( "callout_8xpluskill", self );
@@ -83,7 +83,7 @@ headShotUT( killId, weapon, meansOfDeath )
 	self maps\mp\killstreaks\_killstreaks::giveAdrenaline( "headshot" );
 	self thread maps\mp\_matchdata::logKillEvent( killId, "headshot" );
 	
-	self playsound( "headshot" );
+	self playLocalSound( "headshot" );
 }
 
 
@@ -99,7 +99,7 @@ firstBloodUT( killId, weapon, meansOfDeath )
 
 	thread maps\mp\_utility::teamPlayerCardSplash( "callout_firstblood", self );
 	
-	self playsound( "first_blood" );
+	self playLocalSound( "first_blood" );
 }
 
 
@@ -199,6 +199,7 @@ timeLimitClockUT()
 
 musicControllerUT()
 {
+	return;
 }
 
 
@@ -238,27 +239,27 @@ monitorKillstreakSounds()
 		
 		if ( self.pers["cur_kill_streak"] >= 5 && prevCount < 5 )
 		{
-			self playsound( "killing_spree" );
+			self playLocalSound( "killing_spree" );
 		} 
 		else if ( self.pers["cur_kill_streak"] >= 10 && prevCount < 10 )
 		{
-			self playsound( "rampage" );
+			self playLocalSound( "rampage" );
 		}
 		else if ( self.pers["cur_kill_streak"] >= 15 && prevCount < 15 )
 		{
-			self playsound( "dominating" );
+			self playLocalSound( "dominating" );
 		}
 		else if ( self.pers["cur_kill_streak"] >= 20 && prevCount < 20 )
 		{
-			self playsound( "unstoppable" );
+			self playLocalSound( "unstoppable" );
 		}
 		else if ( self.pers["cur_kill_streak"] >= 25 && prevCount < 25 )
 		{
-			self playsound( "god_like" );
+			self playLocalSound( "god_like" );
 		}
 		else if ( self.pers["cur_kill_streak"] >= 30 && prevCount < 30 )
 		{
-			self playsound( "wicked_sick" );
+			self playLocalSound( "wicked_sick" );
 		}
 		
 		
